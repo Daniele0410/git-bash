@@ -1,0 +1,40 @@
+#!/bin/bash
+
+clear
+
+echo "Variáveis um pouco mais complexas"
+
+echo "→ ------------------------------------------- ←"
+
+echo "Declara uma variável como inteira"
+
+declare -i num=22
+echo "→" $num
+
+echo "+++++++++++++++++++++++++++++++++++"
+
+echo "Array indexado"
+
+declare -a banana=('prata' 'terra')
+echo "→" $banana
+
+echo "+++++++++++++++++++++++++++++++++++"
+
+echo "Array associativo"
+
+declare -A capital
+
+capital["Brasil"]="Brasília"
+capital["França"]="Paris"
+
+echo "→ Capital Brasil" ${capital["Brasil"]}
+echo "→ Capital França" ${capital["França"]}
+
+echo "+++++++++++++++++++++++++++++++++++"
+
+echo "Somente leitura, não pode ser modificada ou excluída"
+
+declare -r casa=sofá
+echo "→" $casa
+
+echo "+++++++++++++++++++++++++++++++++++"

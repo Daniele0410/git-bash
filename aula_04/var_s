@@ -1,0 +1,32 @@
+#!/usr/bin/env bash
+
+clear
+
+echo " → Algumas variáveis simples"
+
+fruta=banana
+echo "fruta = banana" 
+echo $fruta
+echo "------------------------------"
+
+echo " → Nome"
+
+read -p "Digite seu nome:" nome
+echo "------------------------------"
+
+echo " → números"
+
+numeros=("10, 22, 36, 44")
+
+echo $numeros
+echo "-------------------------------"
+
+echo " → Atribuição de saída de comando"
+
+echo " * nome de usuário"
+
+usuario=$(whoami)
+echo $usuario
+echo "--------------------------------"
+
+
