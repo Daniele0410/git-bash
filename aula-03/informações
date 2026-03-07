@@ -1,0 +1,19 @@
+#!/bin/bash
+
+clear
+echo "informações importantes"
+echo "--------------------------"
+echo -n "Usuário: "
+whoami
+
+echo -n "Hostname: "
+hostname
+
+echo -n "Time: "
+times
+
+echo -n "Kernel: "
+uname -rms
+
+echo "--------------------------"
+
