@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+
+# Testa o número de argumentos
+
+msg="Comando inválid, necessário informar um nome de comando válido "
+
+[[ $# -ne 1 ]] && echo $msg && exit 1
+
+
+# execulta "help" para verificar se vai conseguir mostrar
+# a ajuda do comando (sucesso) ou (erro)
+
+help $1 &> /dev/null
+
+# comando test para avaliar...
+
+[[ $? -eq 0 ]] && echo "É builtin" || echo "Não é builtin"

@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+echo "PID da sessão do Shell do script:" $$
+
+exit 0
