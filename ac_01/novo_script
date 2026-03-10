@@ -1,0 +1,36 @@
+#!/usr/bin/env bash
+
+# opções....
+
+editor="nano"
+
+# Variáveis
+
+dia_hoje=$( date +'%r -- %d/%m/%Y' )
+
+header="#!/usr/bin/env bash
+# ----------------------------------------------------------
+# Script   :
+# Descrição:
+# Versão   : 0.1
+# Autor    : Daniele S. <anninka2021@gmail.com>
+# Data     : $dia_hoje
+# Licença  : GNU/GPL v3.0
+# ----------------------------------------------------------
+# Uso:
+# ----------------------------------------------------------
+"
+
+# testar se o usuário passou o número certo de argumentos ( apenas 1 )
+
+[[ $# -ne 1 ]] && echo "Apenas 1 nome de arquivo!" && exit 1
+
+# testar se o arquivo já existe
+
+[[ -f $1 ]] && echo "Arquivo já existe" && exit 1
+
+echo "$header" > $1
+chmod +x $1
+$editor $1
+
+exit 0
