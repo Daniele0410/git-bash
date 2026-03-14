@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+# ----------------------------------------------------------
+# Script   :
+# Descrição:
+# Versão   : 0.1
+# Autor    : Daniele S. <anninka2021@gmail.com>
+# Data     : 10:13:42 PM -- 13/03/2026
+# Licença  : GNU/GPL v3.0
+# ----------------------------------------------------------
+# Uso:
+# ----------------------------------------------------------
+
+clear
+
+echo "
+PID da sessão do Bash do script: $$
+PID da sessão do Bash no terminal: $PPID
+"
