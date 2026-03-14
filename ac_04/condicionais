@@ -1,0 +1,40 @@
+#!/usr/bin/env bash
+# ----------------------------------------------------------
+# Script   : condicionais
+# Descrição: exemplos de testes de expressões condicionais
+# Versão   : 0.1
+# Autor    : Daniele S. <anninka2021@gmail.com>
+# Data     : 10:18:02 PM -- 13/03/2026
+# Licença  : GNU/GPL v3.0
+# ----------------------------------------------------------
+# Uso: ./condicionais
+# ----------------------------------------------------------
+
+ clear
+
+# Mensagem...
+
+echo "O objetivo desse script é comparar seu número com o número '5'."
+
+
+read -p "Entre com um número de 1 a 10: " numero
+
+# Erros...
+
+# =~ Indica que a expressão da direita é uma REGEX ( expressão regular )
+# ! negação ou inverso
+[[ ! $numero =~ ^[0-9]+$ ]] && echo "Erro! Digite um número!" && exit 1
+
+# -le = less or equal
+[[ $numero -gt 10 || $numero -le 0 ]] && echo "Erro! Seu número deve ser entre 1 a 10" && exit 1
+
+# Respostas normais...
+
+# -eq = equal
+[[ $numero -eq 5 ]] && echo "Seu número é igual a 5!" && exit 0
+
+# -lt = less than
+[[ $numero -lt 5 ]] && echo "Seu número é menor que 5" && exit 0
+
+# -gt = great than
+[[ $numero -gt 5 ]] && echo "Seu número é maior que 5" && exit 0
