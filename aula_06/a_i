@@ -1,0 +1,24 @@
+#!/usr/bin/env bash
+
+# -------------------------------------------------------------
+# Script: Array indexada
+# Descrição: Teste de arrays indezadas
+# -------------------------------------------------------------
+# Uso: ./a_i
+# -------------------------------------------------------------
+
+clear
+
+# Arrays
+
+fruta=("banana" "melancia" "cereja" "kiwi" "pera")
+cores=("amarelo" "vermelho" "vermelho" "verde" "verde")
+
+read -p "Digite um número de 0 a 4: " numero
+
+[[ ! $numero =~ ^[0-5]$ ]] \
+ && echo -e "\nTem que ser um número de 0 a 4! Saindo...\n" \
+ && exit 1
+
+echo "
+Você escolheu ${fruta[$numero]}, que é uma fruta ${cores[$numero]}."
